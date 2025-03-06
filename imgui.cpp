@@ -17033,7 +17033,7 @@ void ImGui::ShowIDStackToolWindow(bool* p_open)
         {
             if (level_desc[n] == '/')
                 tool->ResultPathBuf.append("\\");
-            tool->ResultPathBuf.append(level_desc + n, level_desc + n + 1);
+            tool->ResultPathBuf.append(ImStrv(level_desc + n, level_desc + n + 1));
         }
     }
     Text("0x%08X", tool->QueryId);
