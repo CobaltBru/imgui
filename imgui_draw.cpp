@@ -4585,6 +4585,7 @@ const ImFontLoader* ImFontAtlasGetFontLoaderForStbTruetype()
 // [SECTION] ImFontAtlas: glyph ranges helpers
 //-------------------------------------------------------------------------
 // - GetGlyphRangesDefault()
+// Obsolete functions since 1.92:
 // - GetGlyphRangesGreek()
 // - GetGlyphRangesKorean()
 // - GetGlyphRangesChineseFull()
@@ -4606,6 +4607,7 @@ const ImWchar*   ImFontAtlas::GetGlyphRangesDefault()
     return &ranges[0];
 }
 
+#ifndef IMGUI_DISABLE_OBSOLETE_FUNCTIONS
 const ImWchar*   ImFontAtlas::GetGlyphRangesGreek()
 {
     static const ImWchar ranges[] =
@@ -4855,6 +4857,7 @@ const ImWchar*  ImFontAtlas::GetGlyphRangesVietnamese()
     };
     return &ranges[0];
 }
+#endif // #ifndef IMGUI_DISABLE_OBSOLETE_FUNCTIONS
 
 //-----------------------------------------------------------------------------
 // [SECTION] ImFontGlyphRangesBuilder
