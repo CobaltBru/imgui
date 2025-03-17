@@ -4142,7 +4142,7 @@ void ImFontAtlasBuildInit(ImFontAtlas* atlas)
     }
 
     IM_ASSERT(atlas->FontLoaderData == NULL);
-    if (atlas->FontLoader && atlas->FontLoader->LoaderInit)
+    if (atlas->FontLoader->LoaderInit)
         atlas->FontLoader->LoaderInit(atlas);
 
     // Create initial texture size
