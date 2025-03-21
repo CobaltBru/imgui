@@ -8542,16 +8542,6 @@ void ImGui::PushFont(ImFont* font, float font_size)
     SetCurrentFont(font, font_size);
 }
 
-// NewFrame() calls this and we do this really unusual thing of calling *push_front()*, the reason behind that we want to support the PushFont()/NewFrame()/PopFont() idiom.
-static void PushDefaultFont()
-{
-    ImGuiContext& g = *GImGui;
-    ImFontStackData font_stack_data = { ImGui::GetDefaultFont(), ImGui::GetDefaultFont()->Sources[0].SizePixels };
-    g.FontStack.push_front(font_stack_data);
-    if (g.FontStack.Size == 1)
-        ImGui::SetCurrentFont(font_stack_data.Font, font_stack_data.FontSize);
-}
-
 void  ImGui::PopFont()
 {
     ImGuiContext& g = *GImGui;
@@ -8576,6 +8566,16 @@ void    ImGui::PushFontSize(float font_size)
 void    ImGui::PopFontSize()
 {
     PopFont();
+}
+
+// NewFrame() calls this and we do this really unusual thing of calling *push_front()*, the reason behind that we want to support the PushFont()/NewFrame()/PopFont() idiom.
+static void PushDefaultFont()
+{
+    ImGuiContext& g = *GImGui;
+    ImFontStackData font_stack_data = { ImGui::GetDefaultFont(), ImGui::GetDefaultFont()->Sources[0].SizePixels };
+    g.FontStack.push_front(font_stack_data);
+    if (g.FontStack.Size == 1)
+        ImGui::SetCurrentFont(font_stack_data.Font, font_stack_data.FontSize);
 }
 
 void ImGui::PushItemFlag(ImGuiItemFlags option, bool enabled)
@@ -21264,6 +21264,8 @@ namespace ImGuiFreeType { IMGUI_API const ImFontLoader* GetFontLoader(); IMGUI_A
 // [DEBUG] List fonts in a font atlas and display its texture
 void ImGui::ShowFontAtlas(ImFontAtlas* atlas)
 {
+    ImGuiContext& g = *GImGui;
+
     SeparatorText("Backend Support for Dynamic Fonts");
     BeginDisabled();
     CheckboxFlags("io.BackendFlags: RendererHasTextures", &GetIO().BackendFlags, ImGuiBackendFlags_RendererHasTextures);
@@ -21275,6 +21277,9 @@ void ImGui::ShowFontAtlas(ImFontAtlas* atlas)
     TextLinkOpenURL("https://www.dearimgui.com/faq/");
     SameLine(0, 0);
     Text(" for details on font loading.");
+
+    ImGuiMetricsConfig* cfg = &g.DebugMetricsConfig;
+    Checkbox("Show font preview", &cfg->ShowFontPreview);
 
     // Font loaders
     if (TreeNode("Loader", "Loader: \'%s\'", atlas->FontLoaderName ? atlas->FontLoaderName : "NULL"))
@@ -22343,6 +22348,8 @@ void ImGui::DebugNodeDrawCmdShowMeshAndBoundingBox(ImDrawList* out_draw_list, co
 // [DEBUG] Display details for a single font, called by ShowStyleEditor().
 void ImGui::DebugNodeFont(ImFont* font)
 {
+    ImGuiContext& g = *GImGui;
+    ImGuiMetricsConfig* cfg = &g.DebugMetricsConfig;
     ImFontAtlas* atlas = font->ContainerAtlas;
     bool opened = TreeNode(font, "Font: \"%s\": %d sources(s)", font->GetDebugName(), font->SourcesCount);
 
@@ -22350,9 +22357,12 @@ void ImGui::DebugNodeFont(ImFont* font)
     if (!opened)
         Indent();
     Indent();
-    PushFont(font);
-    Text("The quick brown fox jumps over the lazy dog");
-    PopFont();
+    if (cfg->ShowFontPreview)
+    {
+        PushFont(font);
+        Text("The quick brown fox jumps over the lazy dog");
+        PopFont();
+    }
     if (!opened)
     {
         Unindent();
