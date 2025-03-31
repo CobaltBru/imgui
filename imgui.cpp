@@ -4476,6 +4476,7 @@ void ImGui::GcCompactTransientMiscBuffers()
     g.MultiSelectTempDataStacked = 0;
     g.MultiSelectTempData.clear_destruct();
     TableGcCompactSettings();
+    g.IO.Fonts->CompactCache();
 }
 
 // Free up/compact internal window buffers, we can use this when a window becomes unused.
