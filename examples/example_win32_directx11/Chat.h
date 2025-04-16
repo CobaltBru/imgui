@@ -32,7 +32,6 @@ struct Token
 class Chat
 {
 public:
-    int posIdx;
     string origin;
     vector<Token> tokens;
     float boxWidth = 0;
@@ -40,5 +39,6 @@ public:
     void setTokens(string s);
     Token normalToken(string s);
     Token enterToken(string s);
+    void PrintTokens();
 };
 

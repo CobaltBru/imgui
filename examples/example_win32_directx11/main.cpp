@@ -141,20 +141,12 @@ int main(int, char**)
         // 2. Show a simple window that we create ourselves. We use a Begin/End pair to create a named window.
         {
             
-            ImGui::Begin("안녕, world!");                          // Create a window called "Hello, world!" and append into it.
-            chat.setTokens("my^cimputer\nyour^phone\nhello");
+            ImGui::Begin("안녕, world!");
+            
+            chat.setTokens("my^computer\nyour^phone\nhello");
+            
 
-            // 창의 화면 좌표 기준 (스크린 기준)
-            ImVec2 windowPos = ImGui::GetWindowPos();
-            ImDrawList* drawList = ImGui::GetWindowDrawList();
-
-            // Chat 객체의 tokens를 반복하며 출력
-            for (const auto& token : chat.tokens)
-            {
-                ImVec2 drawPos = ImVec2(windowPos.x + token.x, windowPos.y + token.y);
-
-                drawList->AddText(drawPos, IM_COL32(255, 255, 255, 255), token.text.c_str());
-            }
+            chat.PrintTokens();
 
             ImGui::End();
         }

@@ -2,6 +2,9 @@
 
 void Chat::setTokens(string s)
 {
+    if (s == origin) return;
+    else tokens.clear();
+    origin = s;
     istringstream ss1(s);
     string buffer;
     queue<string> q;
@@ -91,4 +94,25 @@ Token Chat::enterToken(string s)
     tmp.colors = COLORS::WHITE;
     tmp.delay = 0;
     return tmp;
+}
+
+void Chat::PrintTokens()
+{
+    ImVec2 p = ImGui::GetCursorScreenPos();
+    ImVec2 bottomRight = ImVec2(p.x + boxWidth, p.y + boxHeight);
+    ImDrawList* drawList = ImGui::GetWindowDrawList();
+    drawList->AddRectFilled(p, bottomRight, IM_COL32(0, 255, 0, 125));
+
+    for (const auto& token : tokens)
+    {
+        ImVec2 pos = ImGui::GetWindowContentRegionMin();
+        
+        
+        ImGui::SetCursorPosX(pos.x + token.x);
+        ImGui::SetCursorPosY(pos.y + token.y);
+        ImGui::Text(token.text.c_str());
+        /*ImGui::SetCursorPosX(0);
+        ImGui::SetCursorPosX(0);*/
+        
+    }
 }
