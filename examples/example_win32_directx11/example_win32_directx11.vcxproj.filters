@@ -7,6 +7,9 @@
     <Filter Include="sources">
       <UniqueIdentifier>{08e36723-ce4f-4cff-9662-c40801cf1acf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="sources\chat">
+      <UniqueIdentifier>{7daf20d9-91d0-4cf9-8d55-7e06ed01c732}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\imconfig.h">
@@ -23,6 +26,12 @@
     </ClInclude>
     <ClInclude Include="..\..\backends\imgui_impl_dx11.h">
       <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="Chat.h">
+      <Filter>sources\chat</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui_stdlib.h">
+      <Filter>imgui</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -48,6 +57,12 @@
       <Filter>sources</Filter>
     </ClCompile>
     <ClCompile Include="..\..\imgui_tables.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Chat.cpp">
+      <Filter>sources\chat</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_stdlib.cpp">
       <Filter>imgui</Filter>
     </ClCompile>
   </ItemGroup>

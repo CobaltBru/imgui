@@ -1,4 +1,4 @@
-// Dear ImGui: standalone example application for DirectX 11
+﻿// Dear ImGui: standalone example application for DirectX 11
 
 // Learn about Dear ImGui:
 // - FAQ                  https://dearimgui.com/faq
@@ -9,9 +9,15 @@
 #include "imgui.h"
 #include "imgui_impl_win32.h"
 #include "imgui_impl_dx11.h"
+#include "imgui_stdlib.h"
 #include <d3d11.h>
 #include <tchar.h>
+#include <vector>
+#include <string>
 
+#include "Chat.h"
+
+using namespace std;
 // Data
 static ID3D11Device*            g_pd3dDevice = nullptr;
 static ID3D11DeviceContext*     g_pd3dDeviceContext = nullptr;
@@ -26,6 +32,9 @@ void CleanupDeviceD3D();
 void CreateRenderTarget();
 void CleanupRenderTarget();
 LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+
+
+Chat chat;
 
 // Main code
 int main(int, char**)
@@ -54,8 +63,12 @@ int main(int, char**)
     ImGuiIO& io = ImGui::GetIO(); (void)io;
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
-
-    // Setup Dear ImGui style
+    ImFont* korean_font = io.Fonts->AddFontFromFileTTF("font/DungGeunMo.ttf", 18.0f, nullptr, io.Fonts->GetGlyphRangesKorean());
+    if (korean_font != nullptr)
+    {
+        // 기본 폰트로 설정하거나 필요 시 PushFont()를 사용하여 적용합니다.
+        io.FontDefault = korean_font;
+    }// Setup Dear ImGui style
     ImGui::StyleColorsDark();
     //ImGui::StyleColorsLight();
 
@@ -86,6 +99,8 @@ int main(int, char**)
 
     // Main loop
     bool done = false;
+    
+
     while (!done)
     {
         // Poll and handle messages (inputs, window resize, etc.)
@@ -123,42 +138,28 @@ int main(int, char**)
         ImGui_ImplWin32_NewFrame();
         ImGui::NewFrame();
 
-        // 1. Show the big demo window (Most of the sample code is in ImGui::ShowDemoWindow()! You can browse its code to learn more about Dear ImGui!).
-        if (show_demo_window)
-            ImGui::ShowDemoWindow(&show_demo_window);
-
         // 2. Show a simple window that we create ourselves. We use a Begin/End pair to create a named window.
         {
-            static float f = 0.0f;
-            static int counter = 0;
+            
+            ImGui::Begin("안녕, world!");                          // Create a window called "Hello, world!" and append into it.
+            chat.setTokens("my^cimputer\nyour^phone\nhello");
 
-            ImGui::Begin("Hello, world!");                          // Create a window called "Hello, world!" and append into it.
+            // 창의 화면 좌표 기준 (스크린 기준)
+            ImVec2 windowPos = ImGui::GetWindowPos();
+            ImDrawList* drawList = ImGui::GetWindowDrawList();
 
-            ImGui::Text("This is some useful text.");               // Display some text (you can use a format strings too)
-            ImGui::Checkbox("Demo Window", &show_demo_window);      // Edit bools storing our window open/close state
-            ImGui::Checkbox("Another Window", &show_another_window);
+            // Chat 객체의 tokens를 반복하며 출력
+            for (const auto& token : chat.tokens)
+            {
+                ImVec2 drawPos = ImVec2(windowPos.x + token.x, windowPos.y + token.y);
 
-            ImGui::SliderFloat("float", &f, 0.0f, 1.0f);            // Edit 1 float using a slider from 0.0f to 1.0f
-            ImGui::ColorEdit3("clear color", (float*)&clear_color); // Edit 3 floats representing a color
+                drawList->AddText(drawPos, IM_COL32(255, 255, 255, 255), token.text.c_str());
+            }
 
-            if (ImGui::Button("Button"))                            // Buttons return true when clicked (most widgets return true when edited/activated)
-                counter++;
-            ImGui::SameLine();
-            ImGui::Text("counter = %d", counter);
-
-            ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / io.Framerate, io.Framerate);
             ImGui::End();
         }
 
-        // 3. Show another simple window.
-        if (show_another_window)
-        {
-            ImGui::Begin("Another Window", &show_another_window);   // Pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
-            ImGui::Text("Hello from another window!");
-            if (ImGui::Button("Close Me"))
-                show_another_window = false;
-            ImGui::End();
-        }
+        
 
         // Rendering
         ImGui::Render();
