@@ -16,6 +16,7 @@
 #include <string>
 
 #include "Chat.h"
+#include "Control.h"
 
 using namespace std;
 // Data
@@ -35,7 +36,9 @@ LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
 
 Chat chat;
-
+Node node;
+vector<Node> nodes;
+Control control;
 // Main code
 int main(int, char**)
 {
@@ -140,15 +143,10 @@ int main(int, char**)
 
         // 2. Show a simple window that we create ourselves. We use a Begin/End pair to create a named window.
         {
-            
-            ImGui::Begin("안녕, world!");
-            
-            chat.setTokens("my^computer\nyour^phone\nhello");
-            
+            control.Menu(nodes);
 
-            chat.PrintTokens();
+            //node.chat.setTokens("my^computer\nyour^phone\nhello");
 
-            ImGui::End();
         }
 
         

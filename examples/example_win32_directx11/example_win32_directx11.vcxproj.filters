@@ -33,8 +33,9 @@
     <ClInclude Include="imgui_stdlib.h">
       <Filter>imgui</Filter>
     </ClInclude>
-    <ClInclude Include="Node.h">
-      <Filter>sources\chat</Filter>
+    <ClInclude Include="Control.h" />
+    <ClInclude Include="json.hpp">
+      <Filter>sources</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -68,9 +69,10 @@
     <ClCompile Include="imgui_stdlib.cpp">
       <Filter>imgui</Filter>
     </ClCompile>
-    <ClCompile Include="Node.cpp">
-      <Filter>sources\chat</Filter>
+    <ClCompile Include="CommonFunction.h">
+      <Filter>sources</Filter>
     </ClCompile>
+    <ClCompile Include="Control.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.txt" />

@@ -1,0 +1,172 @@
+[
+  {
+    "chat": {
+      "boxHeight": 54.0,
+      "boxWidth": 126.0,
+      "origin": "안녕하세요^저는\n채지운이에요\n^반가워요",
+      "tokens": [
+        {
+          "appear": 1,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 1,
+          "text": "안녕하세요",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.30000001192092896,
+          "option": 0,
+          "text": "저는",
+          "x": 90.0,
+          "y": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 0,
+          "text": "채지운이에요",
+          "x": 0.0,
+          "y": 18.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 0,
+          "text": "",
+          "x": 0.0,
+          "y": 36.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.30000001192092896,
+          "option": 0,
+          "text": "반가워요",
+          "x": 0.0,
+          "y": 36.0
+        }
+      ]
+    },
+    "key": "4xvFOYlwSP",
+    "next": "",
+    "norm": [
+      {
+        "next": "D7WrVkimtC",
+        "text": "ㄱ됴"
+      },
+      {
+        "next": "kyp2OIzCYv",
+        "text": "ㅛㅗㄱ숏ㄱ"
+      }
+    ],
+    "pos": [
+      121.0,
+      160.0
+    ],
+    "red": [
+      {
+        "next": "R5s2fpZby7",
+        "text": "ㅅㄳㅎㄱㄷ"
+      }
+    ]
+  },
+  {
+    "chat": {
+      "boxHeight": 18.0,
+      "boxWidth": 18.0,
+      "origin": "네",
+      "tokens": [
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 0,
+          "text": "네",
+          "x": 0.0,
+          "y": 0.0
+        }
+      ]
+    },
+    "key": "R5s2fpZby7",
+    "next": "zL2Mtn575Z",
+    "norm": [],
+    "pos": [
+      597.0,
+      120.0
+    ],
+    "red": []
+  },
+  {
+    "chat": {
+      "boxHeight": 18.0,
+      "boxWidth": 90.0,
+      "origin": "ㅅㄱㄷㅅㄱ",
+      "tokens": [
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 0,
+          "text": "ㅅㄱㄷㅅㄱ",
+          "x": 0.0,
+          "y": 0.0
+        }
+      ]
+    },
+    "key": "D7WrVkimtC",
+    "next": "",
+    "norm": [],
+    "pos": [
+      626.0,
+      463.0
+    ],
+    "red": []
+  },
+  {
+    "chat": {
+      "boxHeight": 18.0,
+      "boxWidth": 81.0,
+      "origin": "ㅕㅕㅕ6ㅕ",
+      "tokens": [
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 0,
+          "text": "ㅕㅕㅕ6ㅕ",
+          "x": 0.0,
+          "y": 0.0
+        }
+      ]
+    },
+    "key": "kyp2OIzCYv",
+    "next": "",
+    "norm": [],
+    "pos": [
+      636.0,
+      798.0
+    ],
+    "red": []
+  },
+  {
+    "chat": {
+      "boxHeight": 0.0,
+      "boxWidth": 0.0,
+      "origin": "",
+      "tokens": []
+    },
+    "key": "zL2Mtn575Z",
+    "next": "",
+    "norm": [],
+    "pos": [
+      974.0,
+      45.0
+    ],
+    "red": []
+  }
+]

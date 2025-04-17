@@ -154,8 +154,9 @@
     <ClInclude Include="..\..\backends\imgui_impl_dx11.h" />
     <ClInclude Include="..\..\backends\imgui_impl_win32.h" />
     <ClInclude Include="Chat.h" />
+    <ClInclude Include="Control.h" />
     <ClInclude Include="imgui_stdlib.h" />
-    <ClInclude Include="Node.h" />
+    <ClInclude Include="json.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\imgui.cpp" />
@@ -166,9 +167,10 @@
     <ClCompile Include="..\..\backends\imgui_impl_dx11.cpp" />
     <ClCompile Include="..\..\backends\imgui_impl_win32.cpp" />
     <ClCompile Include="Chat.cpp" />
+    <ClCompile Include="CommonFunction.h" />
+    <ClCompile Include="Control.cpp" />
     <ClCompile Include="imgui_stdlib.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Node.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\misc\debuggers\imgui.natstepfilter" />
