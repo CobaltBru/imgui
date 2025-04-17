@@ -1,9 +1,9 @@
 [
   {
     "chat": {
-      "boxHeight": 54.0,
-      "boxWidth": 126.0,
-      "origin": "안녕하세요^저는\n채지운이에요\n^반가워요",
+      "boxHeight": 36.0,
+      "boxWidth": 135.0,
+      "origin": "안녕하세요^ 저는\n채지운입니다",
       "tokens": [
         {
           "appear": 1,
@@ -19,7 +19,7 @@
           "colors": 0,
           "delay": 0.30000001192092896,
           "option": 0,
-          "text": "저는",
+          "text": " 저는",
           "x": 90.0,
           "y": 0.0
         },
@@ -28,128 +28,80 @@
           "colors": 0,
           "delay": 0.0,
           "option": 0,
-          "text": "채지운이에요",
+          "text": "채지운입니다",
           "x": 0.0,
           "y": 18.0
-        },
-        {
-          "appear": 0,
-          "colors": 0,
-          "delay": 0.0,
-          "option": 0,
-          "text": "",
-          "x": 0.0,
-          "y": 36.0
-        },
-        {
-          "appear": 0,
-          "colors": 0,
-          "delay": 0.30000001192092896,
-          "option": 0,
-          "text": "반가워요",
-          "x": 0.0,
-          "y": 36.0
         }
       ]
     },
-    "key": "4xvFOYlwSP",
+    "key": "8opXaU1Eqn",
     "next": "",
     "norm": [
       {
-        "next": "D7WrVkimtC",
-        "text": "ㄱ됴"
-      },
-      {
-        "next": "kyp2OIzCYv",
-        "text": "ㅛㅗㄱ숏ㄱ"
+        "next": "21v5UDyrQJ",
+        "text": "ㅏㅓㅗ"
       }
     ],
     "pos": [
-      121.0,
-      160.0
+      35.0,
+      173.0
     ],
     "red": [
       {
-        "next": "R5s2fpZby7",
-        "text": "ㅅㄳㅎㄱㄷ"
+        "next": "scX9FIB5Ll",
+        "text": "ㅁㄴㅇㅀ"
       }
     ]
   },
   {
     "chat": {
       "boxHeight": 18.0,
-      "boxWidth": 18.0,
-      "origin": "네",
+      "boxWidth": 54.0,
+      "origin": "ㄷㅈㄱ",
       "tokens": [
         {
           "appear": 0,
           "colors": 0,
           "delay": 0.0,
           "option": 0,
-          "text": "네",
+          "text": "ㄷㅈㄱ",
           "x": 0.0,
           "y": 0.0
         }
       ]
     },
-    "key": "R5s2fpZby7",
-    "next": "zL2Mtn575Z",
+    "key": "scX9FIB5Ll",
+    "next": "vROSbZUCt2",
     "norm": [],
     "pos": [
-      597.0,
-      120.0
+      565.0,
+      81.0
     ],
     "red": []
   },
   {
     "chat": {
       "boxHeight": 18.0,
-      "boxWidth": 90.0,
-      "origin": "ㅅㄱㄷㅅㄱ",
+      "boxWidth": 36.0,
+      "origin": "ㅕㅑ",
       "tokens": [
         {
           "appear": 0,
           "colors": 0,
           "delay": 0.0,
           "option": 0,
-          "text": "ㅅㄱㄷㅅㄱ",
+          "text": "ㅕㅑ",
           "x": 0.0,
           "y": 0.0
         }
       ]
     },
-    "key": "D7WrVkimtC",
+    "key": "21v5UDyrQJ",
     "next": "",
     "norm": [],
     "pos": [
-      626.0,
-      463.0
-    ],
-    "red": []
-  },
-  {
-    "chat": {
-      "boxHeight": 18.0,
-      "boxWidth": 81.0,
-      "origin": "ㅕㅕㅕ6ㅕ",
-      "tokens": [
-        {
-          "appear": 0,
-          "colors": 0,
-          "delay": 0.0,
-          "option": 0,
-          "text": "ㅕㅕㅕ6ㅕ",
-          "x": 0.0,
-          "y": 0.0
-        }
-      ]
-    },
-    "key": "kyp2OIzCYv",
-    "next": "",
-    "norm": [],
-    "pos": [
-      636.0,
-      798.0
+      575.0,
+      513.0
     ],
     "red": []
   },
@@ -160,12 +112,12 @@
       "origin": "",
       "tokens": []
     },
-    "key": "zL2Mtn575Z",
+    "key": "vROSbZUCt2",
     "next": "",
     "norm": [],
     "pos": [
-      974.0,
-      45.0
+      960.0,
+      80.0
     ],
     "red": []
   }
