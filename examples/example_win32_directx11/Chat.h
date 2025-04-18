@@ -68,6 +68,7 @@ class Node
 public:
     string key;
     string next;
+    int posIndex = 0;
     Chat chat;
     bool activeTextEditor = false;
 

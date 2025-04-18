@@ -120,6 +120,7 @@ void Control::SaveGraph(const std::vector<Node>& nodes, const std::string& path)
         jn["key"] = n.key;
         jn["pos"] = { n.g_pos.x, n.g_pos.y };
         jn["next"] = n.next;
+        jn["posIndex"] = n.posIndex;
         jn["chat"] = n.chat.to_json();
         // redSelects
         jn["red"] = json::array();
@@ -147,6 +148,7 @@ void Control::LoadGraph(std::vector<Node>& nodes, const std::string& path) {
         n.g_pos.x = pos[0].get<float>();
         n.g_pos.y = pos[1].get<float>();
         n.next = jn.at("next").get<string>();
+        n.posIndex = jn.at("posIndex").get<int>();
         n.chat.from_json(jn.at("chat"));
         // selects
         for (auto& jr : jn.at("red"))

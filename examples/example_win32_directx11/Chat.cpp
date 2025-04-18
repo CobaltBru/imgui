@@ -6,8 +6,11 @@ static Token* selectedToken = nullptr;
 
 void Chat::setTokens(string s)
 {
-    if (s == origin) return;
-    else tokens.clear();
+    /*if (s == origin) return;
+    else tokens.clear();*/
+    tokens.clear();
+    boxWidth = 0;
+    boxHeight = 0;
     origin = s;
     istringstream ss1(s);
     string buffer;
@@ -72,7 +75,7 @@ Token Chat::normalToken(string s)
     {
         tmp.x = tokens.back().x + ImGui::CalcTextSize(tokens.back().text.c_str()).x;
         tmp.y = tokens.back().y;
-        tmp.delay = 0.3f;
+        tmp.delay = 0.5f;
     }
     
     tmp.text = s;
@@ -247,6 +250,17 @@ bool Node::Screen(ImVec2& panOffset)
 
     ImGuiWindowFlags flags = ImGuiWindowFlags_NoMove;
     ImGui::Begin(key.c_str());
+
+    if (ImGui::IsWindowHovered(ImGuiHoveredFlags_AllowWhenBlockedByPopup) &&
+        ImGui::IsMouseDoubleClicked(ImGuiMouseButton_Left))
+    {
+        ImGui::SetClipboardText(key.c_str());
+        // (선택) 복사가 됐다는 작은 툴팁
+        ImGui::BeginTooltip();
+        ImGui::Text("Key copied!");
+        ImGui::EndTooltip();
+    }
+
     windowPos = ImGui::GetWindowPos();
     windowSize = ImGui::GetWindowSize();
     connections.clear();
@@ -449,7 +463,7 @@ bool Node::Screen(ImVec2& panOffset)
     ImVec2 contentMax = ImGui::GetWindowContentRegionMax();
     ImVec2 deleteBtnSize = ImVec2(60, 20);
     ImVec2 deleteBtnPos = ImVec2(contentMax.x - deleteBtnSize.x - 10, contentMax.y - deleteBtnSize.y - 10);
-
+    ImGui::InputInt("Pos Index", &posIndex);
     ImGui::SetCursorPos(deleteBtnPos);
     bool shouldDelete = ImGui::Button("Delete", deleteBtnSize);
     // (3) 노드 자체 연결: next 가 비어있지 않으면
