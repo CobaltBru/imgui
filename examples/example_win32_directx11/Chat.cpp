@@ -4,56 +4,121 @@
 
 static Token* selectedToken = nullptr;
 
+//void Chat::setTokens(string s)
+//{
+//    /*if (s == origin) return;
+//    else tokens.clear();*/
+//    tokens.clear();
+//    boxWidth = 0;
+//    boxHeight = 0;
+//    origin = s;
+//    istringstream ss1(s);
+//    string buffer;
+//    queue<string> q;
+//    queue<string> nq;
+//
+//    int yidx = 0;
+//    while (getline(ss1, buffer, '\n')) {
+//        q.push(buffer);
+//    }
+//    string current = q.front();
+//    q.pop();
+//    istringstream ss2(current);
+//    while (getline(ss2, buffer, '^')) {
+//        //if (buffer == "")continue;
+//        tokens.push_back(normalToken(buffer, yidx));
+//    }
+//
+//    while (!q.empty())
+//    {
+//        yidx++;
+//        current = q.front();
+//        q.pop();
+//        istringstream ss(current);
+//        vector<string>v;
+//        while (getline(ss, buffer, '^')) {
+//            v.push_back(buffer);
+//        }
+//        for (int i = 0; i < v.size(); i++)
+//        {
+//            //if (v[i] == "")continue;
+//            if (i == 0)
+//            {
+//                tokens.push_back(enterToken(v[i], yidx));
+//            }
+//            else
+//            {
+//                tokens.push_back(normalToken(v[i], yidx));
+//            }
+//        }
+//    }
+//
+//
+//    for (auto& tok : tokens)
+//    {
+//        tok.width = ImGui::CalcTextSize(tok.text.c_str()).x;
+//        tok.height = ImGui::CalcTextSize(tok.text.c_str()).y;
+//        boxWidth = max(boxWidth, tok.x + tok.width);
+//        boxHeight = max(boxHeight, tok.y + tok.height);
+//    }
+//
+//}
+
 void Chat::setTokens(string s)
 {
-    /*if (s == origin) return;
-    else tokens.clear();*/
     tokens.clear();
     boxWidth = 0;
     boxHeight = 0;
     origin = s;
     istringstream ss1(s);
     string buffer;
-    queue<string> q;
-    queue<string> nq;
-
+    
+    bool cut = false;
     int yidx = 0;
     while (getline(ss1, buffer, '\n')) {
-        q.push(buffer);
-    }
-    string current = q.front();
-    q.pop();
-    istringstream ss2(current);
-    while (getline(ss2, buffer, '^')) {
-        //if (buffer == "")continue;
-        tokens.push_back(normalToken(buffer, yidx));
-    }
-
-    while (!q.empty())
-    {
-        yidx++;
-        current = q.front();
-        q.pop();
-        istringstream ss(current);
-        vector<string>v;
-        while (getline(ss, buffer, '^')) {
-            v.push_back(buffer);
+        vector<string> v;
+        
+        istringstream ss2(buffer);
+        string buffer2;
+        while (getline(ss2, buffer2, '^')) {
+            v.push_back(buffer2);
         }
+
         for (int i = 0; i < v.size(); i++)
         {
-            //if (v[i] == "")continue;
-            if (i == 0)
+            if (i == 0) //행의 첫 토큰
             {
-                tokens.push_back(enterToken(v[i], yidx));
+                if (v[i] == "") //빈토큰?
+                {
+                }
+                else //아니면?
+                {
+                    if (cut == true) //전 행 맨 뒤에서 잘렸으면?
+                    {
+                        cut = false;
+                        tokens.push_back(normalToken(v[i], yidx));
+                    }
+                    else
+                    {
+                        tokens.push_back(enterToken(v[i], yidx));
+                    }
+                    
+                }
             }
-            else
+            else //행의 첫 토큰 아니면?
             {
-                tokens.push_back(normalToken(v[i], yidx));
+                if (v[i] == "") //빈토큰?
+                {
+                    cut = true; //앞에서 잘렸다는 것
+                }
+                else
+                {
+                    tokens.push_back(normalToken(v[i], yidx));
+                }
             }
         }
+        yidx++;
     }
-
-
     for (auto& tok : tokens)
     {
         tok.width = ImGui::CalcTextSize(tok.text.c_str()).x;
@@ -61,7 +126,6 @@ void Chat::setTokens(string s)
         boxWidth = max(boxWidth, tok.x + tok.width);
         boxHeight = max(boxHeight, tok.y + tok.height);
     }
-
 }
 
 Token Chat::normalToken(string s, int yidx)
@@ -75,8 +139,17 @@ Token Chat::normalToken(string s, int yidx)
     }
     else
     {
-        tmp.x = tokens.back().x + ImGui::CalcTextSize(tokens.back().text.c_str()).x;
-        tmp.y = tokens.back().y;
+        if (tokens.back().yIdx != yidx)
+        {
+            tmp.x = 0;
+            tmp.y = tokens.back().y + ImGui::CalcTextSize(tokens.back().text.c_str()).y;
+        }
+        else
+        {
+            tmp.x = tokens.back().x + ImGui::CalcTextSize(tokens.back().text.c_str()).x;
+            tmp.y = ImGui::CalcTextSize(tokens.back().text.c_str()).y * yidx;
+        }
+        
         tmp.delay = 0.5f;
     }
     tmp.yIdx = yidx;

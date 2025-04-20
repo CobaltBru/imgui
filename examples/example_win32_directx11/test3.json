@@ -3,13 +3,13 @@
     "chat": {
       "boxHeight": 54.0,
       "boxWidth": 135.0,
-      "origin": "안녕하세요^ 저는\n채지운입니다\n^잘부탁드려요~",
+      "origin": "안녕하세요^ 저는\n채지운입니다\n^잘부탁드려요~~",
       "tokens": [
         {
-          "appear": 1,
-          "colors": 1,
+          "appear": 0,
+          "colors": 2,
           "delay": 0.0,
-          "option": 1,
+          "option": 0,
           "text": "안녕하세요",
           "x": 0.0,
           "y": 0.0,
@@ -26,10 +26,10 @@
           "yIdx": 0.0
         },
         {
-          "appear": 0,
-          "colors": 2,
+          "appear": 1,
+          "colors": 3,
           "delay": 0.0,
-          "option": 0,
+          "option": 1,
           "text": "채지운입니다",
           "x": 0.0,
           "y": 18.0,
@@ -37,20 +37,10 @@
         },
         {
           "appear": 0,
-          "colors": 0,
-          "delay": 0.0,
-          "option": 0,
-          "text": "",
-          "x": 0.0,
-          "y": 36.0,
-          "yIdx": 2.0
-        },
-        {
-          "appear": 0,
           "colors": 5,
           "delay": 0.5,
           "option": 2,
-          "text": "잘부탁드려요~",
+          "text": "잘부탁드려요~~",
           "x": 0.0,
           "y": 36.0,
           "yIdx": 2.0
@@ -116,7 +106,7 @@
       "origin": "이름^이 무엇인가요?",
       "tokens": [
         {
-          "appear": 0,
+          "appear": 1,
           "colors": 6,
           "delay": 0.0,
           "option": 1,
@@ -182,10 +172,10 @@
       "origin": "전^ 별로^ 안반가운데여",
       "tokens": [
         {
-          "appear": 1,
-          "colors": 1,
+          "appear": 0,
+          "colors": 0,
           "delay": 0.0,
-          "option": 1,
+          "option": 0,
           "text": "전",
           "x": 0.0,
           "y": 0.0,
@@ -202,10 +192,10 @@
           "yIdx": 0.0
         },
         {
-          "appear": 1,
-          "colors": 1,
+          "appear": 0,
+          "colors": 0,
           "delay": 0.5,
-          "option": 1,
+          "option": 0,
           "text": " 안반가운데여",
           "x": 63.0,
           "y": 0.0,
@@ -243,7 +233,7 @@
           "appear": 0,
           "colors": 4,
           "delay": 0.5,
-          "option": 1,
+          "option": 2,
           "text": "빛빛빛",
           "x": 45.0,
           "y": 0.0,
