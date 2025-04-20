@@ -17,6 +17,7 @@ void Chat::setTokens(string s)
     queue<string> q;
     queue<string> nq;
 
+    int yidx = 0;
     while (getline(ss1, buffer, '\n')) {
         q.push(buffer);
     }
@@ -25,11 +26,12 @@ void Chat::setTokens(string s)
     istringstream ss2(current);
     while (getline(ss2, buffer, '^')) {
         //if (buffer == "")continue;
-        tokens.push_back(normalToken(buffer));
+        tokens.push_back(normalToken(buffer, yidx));
     }
 
     while (!q.empty())
     {
+        yidx++;
         current = q.front();
         q.pop();
         istringstream ss(current);
@@ -42,11 +44,11 @@ void Chat::setTokens(string s)
             //if (v[i] == "")continue;
             if (i == 0)
             {
-                tokens.push_back(enterToken(v[i]));
+                tokens.push_back(enterToken(v[i], yidx));
             }
             else
             {
-                tokens.push_back(normalToken(v[i]));
+                tokens.push_back(normalToken(v[i], yidx));
             }
         }
     }
@@ -62,7 +64,7 @@ void Chat::setTokens(string s)
 
 }
 
-Token Chat::normalToken(string s)
+Token Chat::normalToken(string s, int yidx)
 {
     Token tmp;
     if (tokens.empty())
@@ -77,7 +79,7 @@ Token Chat::normalToken(string s)
         tmp.y = tokens.back().y;
         tmp.delay = 0.5f;
     }
-    
+    tmp.yIdx = yidx;
     tmp.text = s;
     tmp.appear = APPEAR::NORMAL;
     tmp.option = OPTION::STOP;
@@ -86,7 +88,7 @@ Token Chat::normalToken(string s)
     return tmp;
 }
 
-Token Chat::enterToken(string s)
+Token Chat::enterToken(string s, int yidx)
 {
     Token tmp;
     if (tokens.empty())
@@ -99,6 +101,7 @@ Token Chat::enterToken(string s)
         tmp.x = 0;
         tmp.y = tokens.back().y + ImGui::CalcTextSize(tokens.back().text.c_str()).y;
     }
+    tmp.yIdx = yidx;
     tmp.text = s;
     tmp.appear = APPEAR::NORMAL;
     tmp.option = OPTION::STOP;
@@ -194,6 +197,7 @@ json Chat::to_json() const {
         j["tokens"].push_back({
             {"x",      tok.x},
             {"y",      tok.y},
+            {"yIdx",   tok.yIdx },
             {"text",   tok.text},
             {"appear", (int)tok.appear},
             {"option", (int)tok.option},
@@ -217,6 +221,7 @@ void Chat::from_json(const json& j) {
         Token tok;
         tok.x = jt.at("x").get<float>();
         tok.y = jt.at("y").get<float>();
+        tok.yIdx = jt.at("yIdx").get<int>();
         tok.text = jt.at("text").get<string>();
         tok.appear = static_cast<APPEAR>(jt.at("appear").get<int>());
         tok.option = static_cast<OPTION>(jt.at("option").get<int>());

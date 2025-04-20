@@ -23,6 +23,7 @@ enum COLORS { WHITE, RED, YELLOW, PURPLE, ORANGE, GREEN, SKY };
 struct Token
 {
     float x, y;
+    float yIdx;
     float width, height;
     string text;
     APPEAR appear;
@@ -47,8 +48,8 @@ public:
     float boxWidth = 0;
     float boxHeight = 0;
     void setTokens(string s);
-    Token normalToken(string s);
-    Token enterToken(string s);
+    Token normalToken(string s, int yidx);
+    Token enterToken(string s, int yidx);
     void PrintTokens();
     void PrintTokenBox(Token tok, int flag);
 
