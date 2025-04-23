@@ -1,0 +1,740 @@
+[
+  {
+    "chat": {
+      "boxHeight": 18.0,
+      "boxWidth": 171.0,
+      "origin": "자...^와서 앉도록 해",
+      "tokens": [
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 0,
+          "text": "자...",
+          "x": 0.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.5,
+          "option": 0,
+          "text": "와서 앉도록 해",
+          "x": 45.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        }
+      ]
+    },
+    "key": "UnBP5gsTpB",
+    "next": "",
+    "norm": [],
+    "pos": [
+      409.0,
+      626.0
+    ],
+    "posIndex": 0,
+    "red": []
+  },
+  {
+    "chat": {
+      "boxHeight": 36.0,
+      "boxWidth": 171.0,
+      "origin": "좋아 보이는군. ^그럼\n시작해볼까",
+      "tokens": [
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 0,
+          "text": "좋아 보이는군. ",
+          "x": 0.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.5,
+          "option": 0,
+          "text": "그럼",
+          "x": 135.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 0,
+          "text": "시작해볼까",
+          "x": 0.0,
+          "y": 18.0,
+          "yIdx": 1.0
+        }
+      ]
+    },
+    "key": "T6qxd3wono",
+    "next": "",
+    "norm": [
+      {
+        "next": "mg58Ashywt",
+        "text": "그래."
+      }
+    ],
+    "pos": [
+      425.0,
+      243.0
+    ],
+    "posIndex": 0,
+    "red": [
+      {
+        "next": "JtWDmHxxG7",
+        "text": "내 약이나 내놔"
+      }
+    ]
+  },
+  {
+    "chat": {
+      "boxHeight": 18.0,
+      "boxWidth": 216.0,
+      "origin": "요즘도 밤에 ^악몽^을 꾸나?",
+      "tokens": [
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 0,
+          "text": "요즘도 밤에 ",
+          "x": 0.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 3,
+          "delay": 0.5,
+          "option": 0,
+          "text": "악몽",
+          "x": 108.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.5,
+          "option": 0,
+          "text": "을 꾸나?",
+          "x": 144.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        }
+      ]
+    },
+    "key": "mg58Ashywt",
+    "next": "",
+    "norm": [
+      {
+        "next": "h53edpWyLo",
+        "text": "그래."
+      },
+      {
+        "next": "h53edpWyLo",
+        "text": "가끔."
+      },
+      {
+        "next": "Jpho9FoLwm",
+        "text": "아니."
+      }
+    ],
+    "pos": [
+      1137.0,
+      302.0
+    ],
+    "posIndex": 0,
+    "red": [
+      {
+        "next": "X0CXrB2qMG",
+        "text": "어서 내 약이나 줘"
+      }
+    ]
+  },
+  {
+    "chat": {
+      "boxHeight": 36.0,
+      "boxWidth": 234.0,
+      "origin": "이건 ^아주 ^중요한 ^이야기^야.\n^먼저 이야기를 들어",
+      "tokens": [
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 0,
+          "text": "이건 ",
+          "x": 0.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 1,
+          "colors": 1,
+          "delay": 0.5,
+          "option": 1,
+          "text": "아주 ",
+          "x": 45.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 1,
+          "colors": 1,
+          "delay": 0.5,
+          "option": 1,
+          "text": "중요한 ",
+          "x": 90.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 1,
+          "colors": 1,
+          "delay": 0.5,
+          "option": 1,
+          "text": "이야기",
+          "x": 153.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.5,
+          "option": 0,
+          "text": "야.",
+          "x": 207.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.5,
+          "option": 0,
+          "text": "먼저 이야기를 들어",
+          "x": 0.0,
+          "y": 18.0,
+          "yIdx": 1.0
+        }
+      ]
+    },
+    "key": "JtWDmHxxG7",
+    "next": "mg58Ashywt",
+    "norm": [],
+    "pos": [
+      774.0,
+      64.0
+    ],
+    "posIndex": 0,
+    "red": []
+  },
+  {
+    "chat": {
+      "boxHeight": 54.0,
+      "boxWidth": 369.0,
+      "origin": "좋은 일이군.\n^알다시피 너는 ^끔찍한 전쟁 트라우마^를 겪고\n^기억을 잃고^ 쇠약해졌어",
+      "tokens": [
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 0,
+          "text": "좋은 일이군.",
+          "x": 0.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.5,
+          "option": 0,
+          "text": "알다시피 너는 ",
+          "x": 0.0,
+          "y": 18.0,
+          "yIdx": 1.0
+        },
+        {
+          "appear": 0,
+          "colors": 3,
+          "delay": 0.5,
+          "option": 1,
+          "text": "끔찍한 전쟁 트라우마",
+          "x": 126.0,
+          "y": 18.0,
+          "yIdx": 1.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.5,
+          "option": 0,
+          "text": "를 겪고",
+          "x": 306.0,
+          "y": 18.0,
+          "yIdx": 1.0
+        },
+        {
+          "appear": 0,
+          "colors": 1,
+          "delay": 0.5,
+          "option": 0,
+          "text": "기억을 잃고",
+          "x": 0.0,
+          "y": 36.0,
+          "yIdx": 2.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.5,
+          "option": 0,
+          "text": " 쇠약해졌어",
+          "x": 99.0,
+          "y": 36.0,
+          "yIdx": 2.0
+        }
+      ]
+    },
+    "key": "Jpho9FoLwm",
+    "next": "6GAZXiTZja",
+    "norm": [],
+    "pos": [
+      1481.0,
+      814.0
+    ],
+    "posIndex": 0,
+    "red": []
+  },
+  {
+    "chat": {
+      "boxHeight": 36.0,
+      "boxWidth": 324.0,
+      "origin": "그렇군. 너는 ^끔찍한 전쟁 트라우마^를\n겪었어. ^기억을 잃고^ 쇠약해진 이유지.",
+      "tokens": [
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 0,
+          "text": "그렇군. 너는 ",
+          "x": 0.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 3,
+          "delay": 0.5,
+          "option": 1,
+          "text": "끔찍한 전쟁 트라우마",
+          "x": 117.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.5,
+          "option": 0,
+          "text": "를",
+          "x": 297.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 0,
+          "text": "겪었어. ",
+          "x": 0.0,
+          "y": 18.0,
+          "yIdx": 1.0
+        },
+        {
+          "appear": 0,
+          "colors": 1,
+          "delay": 0.5,
+          "option": 0,
+          "text": "기억을 잃고",
+          "x": 72.0,
+          "y": 18.0,
+          "yIdx": 1.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.5,
+          "option": 0,
+          "text": " 쇠약해진 이유지.",
+          "x": 171.0,
+          "y": 18.0,
+          "yIdx": 1.0
+        }
+      ]
+    },
+    "key": "h53edpWyLo",
+    "next": "PBxpu6JHoj",
+    "norm": [],
+    "pos": [
+      1515.0,
+      313.0
+    ],
+    "posIndex": 0,
+    "red": []
+  },
+  {
+    "chat": {
+      "boxHeight": 54.0,
+      "boxWidth": 180.0,
+      "origin": "매일 밤 꾸는 꿈도\n그것과 관련 있을지도\n모르겠군.",
+      "tokens": [
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 0,
+          "text": "매일 밤 꾸는 꿈도",
+          "x": 0.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 0,
+          "text": "그것과 관련 있을지도",
+          "x": 0.0,
+          "y": 18.0,
+          "yIdx": 1.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 0,
+          "text": "모르겠군.",
+          "x": 0.0,
+          "y": 36.0,
+          "yIdx": 2.0
+        }
+      ]
+    },
+    "key": "PBxpu6JHoj",
+    "next": "Y4J3vwprnm",
+    "norm": [
+      {
+        "next": "N4bTsm5YwY",
+        "text": "그럴지도 모르겠군"
+      },
+      {
+        "next": "N4bTsm5YwY",
+        "text": "그래."
+      }
+    ],
+    "pos": [
+      1918.0,
+      308.0
+    ],
+    "posIndex": 0,
+    "red": [
+      {
+        "next": "X0CXrB2qMG",
+        "text": "어서 내 약을 줘"
+      }
+    ]
+  },
+  {
+    "chat": {
+      "boxHeight": 18.0,
+      "boxWidth": 316.0,
+      "origin": "상태는 좋아보이지만 방심할 수 없어.",
+      "tokens": [
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 0,
+          "text": "상태는 좋아보이지만 방심할 수 없어.",
+          "x": 0.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        }
+      ]
+    },
+    "key": "6GAZXiTZja",
+    "next": "N4bTsm5YwY",
+    "norm": [],
+    "pos": [
+      1910.0,
+      815.0
+    ],
+    "posIndex": 0,
+    "red": []
+  },
+  {
+    "chat": {
+      "boxHeight": 36.0,
+      "boxWidth": 243.0,
+      "origin": "좋아, ^오늘은 ^여기까지 하지.\n^오늘치 ^약이야",
+      "tokens": [
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 0,
+          "text": "좋아, ",
+          "x": 0.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.5,
+          "option": 0,
+          "text": "오늘은 ",
+          "x": 54.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 2,
+          "delay": 0.5,
+          "option": 0,
+          "text": "여기까지 하지.",
+          "x": 117.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.5,
+          "option": 0,
+          "text": "오늘치 ",
+          "x": 0.0,
+          "y": 18.0,
+          "yIdx": 1.0
+        },
+        {
+          "appear": 0,
+          "colors": 6,
+          "delay": 0.5,
+          "option": 0,
+          "text": "약이야",
+          "x": 63.0,
+          "y": 18.0,
+          "yIdx": 1.0
+        }
+      ]
+    },
+    "key": "N4bTsm5YwY",
+    "next": "",
+    "norm": [],
+    "pos": [
+      2370.0,
+      559.0
+    ],
+    "posIndex": 0,
+    "red": []
+  },
+  {
+    "chat": {
+      "boxHeight": 36.0,
+      "boxWidth": 315.0,
+      "origin": "오늘은 ^아주 생산적인 시간^을 보냈어.\n^앞으로도 이럴 수 있었으면 좋겠군",
+      "tokens": [
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 0,
+          "text": "오늘은 ",
+          "x": 0.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 5,
+          "delay": 0.5,
+          "option": 2,
+          "text": "아주 생산적인 시간",
+          "x": 63.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.5,
+          "option": 0,
+          "text": "을 보냈어.",
+          "x": 225.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.5,
+          "option": 0,
+          "text": "앞으로도 이럴 수 있었으면 좋겠군",
+          "x": 0.0,
+          "y": 18.0,
+          "yIdx": 1.0
+        }
+      ]
+    },
+    "key": "jlHjfE32wz",
+    "next": "mpYito8hu6",
+    "norm": [],
+    "pos": [
+      2189.0,
+      -97.0
+    ],
+    "posIndex": 0,
+    "red": []
+  },
+  {
+    "chat": {
+      "boxHeight": 36.0,
+      "boxWidth": 225.0,
+      "origin": "이제 돌아가서 쉬도록 해.\n^곧 ^다음 미션^을 전달할꺼야",
+      "tokens": [
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 0,
+          "text": "이제 돌아가서 쉬도록 해.",
+          "x": 0.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.5,
+          "option": 0,
+          "text": "곧 ",
+          "x": 0.0,
+          "y": 18.0,
+          "yIdx": 1.0
+        },
+        {
+          "appear": 0,
+          "colors": 2,
+          "delay": 0.5,
+          "option": 0,
+          "text": "다음 미션",
+          "x": 27.0,
+          "y": 18.0,
+          "yIdx": 1.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.5,
+          "option": 0,
+          "text": "을 전달할꺼야",
+          "x": 108.0,
+          "y": 18.0,
+          "yIdx": 1.0
+        }
+      ]
+    },
+    "key": "mpYito8hu6",
+    "next": "",
+    "norm": [],
+    "pos": [
+      2581.0,
+      -119.0
+    ],
+    "posIndex": 0,
+    "red": []
+  },
+  {
+    "chat": {
+      "boxHeight": 36.0,
+      "boxWidth": 243.0,
+      "origin": "오늘은 ^굉장히 ^비협조적이군.\n^알겠어.^약을주지",
+      "tokens": [
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.0,
+          "option": 0,
+          "text": "오늘은 ",
+          "x": 0.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 1,
+          "colors": 1,
+          "delay": 0.5,
+          "option": 0,
+          "text": "굉장히 ",
+          "x": 63.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 1,
+          "colors": 1,
+          "delay": 0.5,
+          "option": 0,
+          "text": "비협조적이군.",
+          "x": 126.0,
+          "y": 0.0,
+          "yIdx": 0.0
+        },
+        {
+          "appear": 0,
+          "colors": 0,
+          "delay": 0.5,
+          "option": 0,
+          "text": "알겠어.",
+          "x": 0.0,
+          "y": 18.0,
+          "yIdx": 1.0
+        },
+        {
+          "appear": 0,
+          "colors": 3,
+          "delay": 0.5,
+          "option": 0,
+          "text": "약을주지",
+          "x": 63.0,
+          "y": 18.0,
+          "yIdx": 1.0
+        }
+      ]
+    },
+    "key": "X0CXrB2qMG",
+    "next": "",
+    "norm": [],
+    "pos": [
+      1813.0,
+      -60.0
+    ],
+    "posIndex": 0,
+    "red": []
+  }
+]
